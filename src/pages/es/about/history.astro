@@ -1,0 +1,438 @@
+---
+import About from "@pages/es/about/index.astro";
+
+import pipoClubPhoto from "@assets/pipoClub.jpeg";
+import ageOfEmpiresPhoto from "@assets/ageOfEmpires.png";
+import needForSpeedPhoto from "@assets/needForSpeed.jpg";
+import warcraftIIIPhoto from "@assets/warcraftIII.jpg";
+import callOfDutyPhoto from "@assets/callOfDuty.jpg";
+import gtaViceCityPhoto from "@assets/gtaViceCity.jpg";
+import twistedSisterPhoto from "@assets/twistedSister.jpg";
+import ironMaidenPhoto from "@assets/ironMaiden.jpg";
+import megadethPhoto from "@assets/megadeth.jpg";
+import gunsNRosesPhoto from "@assets/gunsNRoses.jpg";
+import guitarristaDeIglesia from "@assets/guitarristaDeIglesia.jpg";
+---
+
+<About>
+    <section>
+        <p>
+            Soy Mateo Gregory, nací en la ciudad de Cali, Colombia. Desde
+            pequeño siempre me lleno de curiosidad el mundo de la tecnología,
+            naci practicamente al lado de un computador. Con varios juegos
+            interactivos, mis padres me guiaron, aprendia y me llenaba de
+            curiosidad no solo por los juegos en si mismos si no por como estos
+            aparatos tan interesantes funcionaban.
+        </p>
+        <p class="image_paragraph">
+            Uno de los juegos que recuerdo con tanto cariño fue PipoClub, lo veo
+            ahora y digo: Realmente no tenia nada especial, pero lo recuerdo
+            como algo increible, ver los cohetes en el espacio, los planetas,
+            las estrellas, y preguntarme como es posible que pueda ver esto
+            detras de una pantalla.
+            <img
+                style="width: 150px;height: 150px;margin:1rem"
+                src={pipoClubPhoto.src}
+                alt="Pipo Club"
+            />
+        </p>
+        <p>
+            Otros varios juegos que marcaron mi infancia fueron:
+            <a
+                href="https://en.wikipedia.org/wiki/Need_for_Speed:_Most_Wanted_(2005_video_game)"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Need for Speed: Most Wanted</span></a
+            >,
+            <a
+                href="https://en.wikipedia.org/wiki/Age_of_Empires_II"
+                target="_blank"
+                rel="noopener noreferrer"><span>Age of Empires</span></a
+            >,
+            <a
+                href="https://en.wikipedia.org/wiki/Warcraft_III:_The_Frozen_Throne"
+                target="_blank"
+                rel="noopener noreferrer"><span>Warcraft III</span></a
+            > y
+            <a
+                href="https://en.wikipedia.org/wiki/Call_of_Duty_4:_Modern_Warfare"
+                target="_blank"
+                rel="noopener noreferrer"><span>Call of Duty</span></a
+            >. Cada un por una razon diferente, pero todos contribuyeron a mi
+            amor por la tecnología y los videojuegos.
+            <div class="image_box">
+                <div class="image_box_column">
+                    <a
+                        href="https://en.wikipedia.org/wiki/Age_of_Empires_II"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            style="width: 150px;height: 187.5px;margin:1rem"
+                            src={ageOfEmpiresPhoto.src}
+                            alt="Age of Empires"
+                        />
+                    </a>
+                    <a
+                        href="https://en.wikipedia.org/wiki/Need_for_Speed:_Most_Wanted_(2005_video_game)"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            style="width: 150px;height: 187.5px;margin:1rem"
+                            src={needForSpeedPhoto.src}
+                            alt="Need for Speed"
+                        />
+                    </a>
+                </div>
+                <div class="image_box_column">
+                    <a
+                        href="https://en.wikipedia.org/wiki/Warcraft_III:_The_Frozen_Throne"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            style="width: 150px;height: 187.5px;margin:1rem"
+                            src={warcraftIIIPhoto.src}
+                            alt="Warcraft III"
+                        />
+                    </a>
+                    <a
+                        href="https://en.wikipedia.org/wiki/Call_of_Duty_4:_Modern_Warfare"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            style="width: 150px;height: 187.5px;margin:1rem"
+                            src={callOfDutyPhoto.src}
+                            alt="Call of Duty"
+                        />
+                    </a>
+                </div>
+            </div>
+        </p>
+        <p>
+            Durante este descubrimiento de la tecnología, tambien descubri mi
+            amor por la música, para sorpresa de nadie, fue gracias a las bandas
+            sonoras de los videojuegos, en este caso, gracias a la radio de
+            <a
+                href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Gran Theft Auto: Vice City</span></a
+            >, donde escuche piezas como
+            <a
+                href="https://www.youtube.com/watch?v=SRwrg0db_zY&ab_channel=TwistedSister"
+                target="_blank"
+                rel="noopener noreferrer"><span>I Wanna Rock</span></a
+            > de <a
+                href="https://en.wikipedia.org/wiki/Twisted_Sister"
+                target="_blank"
+                rel="noopener noreferrer"><span>Twisted Sister</span></a
+            >,
+            <a
+                href="https://www.youtube.com/watch?v=9qbRHY1l0vc&ab_channel=IronMaiden"
+                target="_blank"
+                rel="noopener noreferrer"><span>2 Minutes to Midnight</span></a
+            > de <a
+                href="https://es.wikipedia.org/wiki/Iron_Maiden"
+                target="_blank"
+                rel="noopener noreferrer"><span>Iron Maiden</span></a
+            > y
+            <a
+                href="https://www.youtube.com/watch?v=rdEupVsL07E&ab_channel=megadethvevo"
+                target="_blank"
+                rel="noopener noreferrer"><span>Peace Sells</span></a
+            > de <a
+                href="https://en.wikipedia.org/wiki/Megadeth"
+                target="_blank"
+                rel="noopener noreferrer"><span>Megadeth</span></a
+            >. Investigando un poco mas descubri la que seria mi banda favorita
+            de esa epoca,
+            <a
+                href="https://en.wikipedia.org/wiki/Guns_N%27_Roses"
+                target="_blank"
+                rel="noopener noreferrer"><span>Guns N' Roses</span></a
+            >, junto a mi cancion favorita de ellos
+            <a
+                href="https://www.youtube.com/watch?v=o1tj2zJ2Wvg&ab_channel=GunsNRosesVEVO"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Welcome to the jungle</span><a></a>
+            </a>
+            <div class="image_box">
+                <div class="image_box_column">
+                    <a
+                        href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            style="width: 262px;height: 335px;margin:1rem"
+                            src={gtaViceCityPhoto.src}
+                            alt="Call of Duty"
+                        />
+                    </a>
+                </div>
+                <div>
+                    <div class="image_box_column">
+                        <a
+                            href="https://www.youtube.com/watch?v=SRwrg0db_zY&ab_channel=TwistedSister"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                style="width: 150px;height: 150px;margin:1rem"
+                                src={twistedSisterPhoto.src}
+                                alt="Call of Duty"
+                            />
+                        </a>
+                        <a
+                            href="https://www.youtube.com/watch?v=9qbRHY1l0vc&ab_channel=IronMaiden"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                style="width: 150px;height: 150px;margin:1rem"
+                                src={ironMaidenPhoto.src}
+                                alt="Call of Duty"
+                            />
+                        </a>
+                    </div>
+                    <div class="image_box_column">
+                        <a
+                            href="https://www.youtube.com/watch?v=rdEupVsL07E&ab_channel=megadethvevo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                style="width: 150px;height: 150px;margin:1rem"
+                                src={megadethPhoto.src}
+                                alt="Call of Duty"
+                            />
+                        </a>
+                        <a
+                            href="https://www.youtube.com/watch?v=o1tj2zJ2Wvg&ab_channel=GunsNRosesVEVO"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                style="width: 150px;height: 150px;margin:1rem"
+                                src={gunsNRosesPhoto.src}
+                                alt="Call of Duty"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </p>
+        <p>
+            Asi, gracias a mi nuevo descubrimiento musical, aproximadamente a
+            mis 12 años, decidi que queria aprender a tocar guitarra, con ayuda
+            de mis padres, compre mi primera guitarra, una
+            <a
+                href="https://www.ibanez.com/eu/products/detail/grx40_5y_02.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Gio Ibanez GRX 40</span>
+            </a> que hasta el dia de hoy la tengo y despues de un par de modificaciones
+            la sigo amando. Ahora tengo otras dos que tambien adoro, una
+            <a
+                href="https://ibanez.fandom.com/wiki/RG370AHMZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Ibanez RG370 Amhz</span>
+            </a>
+            y una
+            <a
+                href="https://www.ibanez.com/eu/products/detail/grg121dx_2y_05.html"
+                target="_blank"
+                rel="noopener noreferrer"><span>Ibanez GRG 121 DX</span></a
+            >
+            y ultimo pero no menos importante mi bajo, un <a
+                href="https://www.fender.com/en-US/squier-electric-basses/jazz-bass/classic-vibe-70s-jazz-bass-v/0374550521.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Classic Vibe '70s Jazz Bass V</span></a
+            > por Squier
+        </p>
+        <p>
+            Despues de pasar por una secundaria (Aqui en Colombia le decimos
+            Bachillerato) un poco accidentada, donde a parte de sentirme que no
+            encajaba, que no hacia parte de nada (si, tipica epoca de
+            adolescente), hubo violencia, discriminacion y muchas otras cosas
+            que no deberian pasar en un lugar donde se supone que deberias
+            sentirte seguro. Llego a mi vida un amigo me gustaria decir que
+            todavia somos amigos, pero... dejemoslo en que asi es la vida,
+            supongo. El me mostro el mundo de la musica desde adentro, me mostro
+            que la musica no era solo escucharla, ni siquiera sentirla, era algo
+            mas, era algo que se podia dar, que se debia dar, que se debia
+            vivir, Juan David Echeverri ex guitarrista de
+            <a
+                href="https://www.youtube.com/@DoBlEsEnTiDo01"
+                target="_blank"
+                rel="noopener noreferrer"><span>Sin Tabla</span></a
+            >
+            con su iconico tema <a
+                href="https://www.youtube.com/watch?v=U8yAgRkW0F0&ab_channel=SinTabla"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Sandwiches & Hamburguesas</span></a
+            >.
+        </p>
+        <div class="image_paragraph">
+            <p>
+                Tuve mi momento de guitarrista de iglesia, donde aprendi a tocar
+                en publico, a tocar con otros, a tocar para otros, fue una
+                experiencia agradable, ahi conoci al <a
+                    href="https://www.instagram.com/el_ducu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span>Ducu</span>
+                </a> uno de los mejores guitarristas que he conocido, en su momento
+                eramos pares, ahora el es un maestro y yo... bueno, sigo siendo un
+                aprendiz,
+            </p>
+
+            <img
+                style='height: 250px;margin:1rem"'
+                src={guitarristaDeIglesia.src}
+                alt="Guitarrista de Iglesia"
+            />
+        </div>
+        <p>
+            Sin embargo no me rindo, sigo aprendiendo, sigo tocando, sigo a mi
+            ritmo, pero eso si, tengo mucho que agradecerle. Ahora el tiene una
+            banda increible, llamada <a
+                href="https://open.spotify.com/artist/31I6lQ4bqxuKZsISBtH3yH?si=mgrD23FTS-C1q_w7wNSA7g"
+                target="_blank"
+                rel="noopener noreferrer"><span>Paraiso Fractal</span></a
+            >, que si no han escuchado, les recomiendo que lo hagan.
+        </p>
+        <p>
+            Asi, llego el momento donde tenia que elegir una carrera, donde
+            tenia que elegir, que queria hacer con mi vida y por el resto de mi
+            vida, primero dado a mi amor por los videojuegos, pense que la mejor
+            opion era ingenieria multimedia, estudie un semestre para darme
+            cuenta que no era lo que queria, queria algo mas cercano a la
+            maquina, algo mas cercano a entender como en algun momento el ser
+            humano logro convertir un monton de cables y circuitos que envian y
+            reciben señales electricas en algo tan increible como un videojuego.
+        </p>
+        <p>
+            Algo muy importante en mi eleccion era sentir que lo que decidiera,
+            que la profesion que eligiera, tenia que ser algo que me permitiera
+            ayudar a la gente, algo que me permitiera hacer algo por el mundo,
+            algo que me hiciera sentir que mi existencia en este mundo no era en
+            vano, y podia ser muchas cosas, medicina, derecho, psicologia, pero
+            la tecnologia y mas en el momento en el que empece (2016) tenia todo
+            por delante, iba a llegar el momento donde todos necesitarian de un
+            ingeniero de sistemas, y no me equivoque. Aunque... para ese momento
+            aun no sabia como los iba a ayudar.
+        </p>
+        <p>
+            Asi fue como me decidi por estudiar <a
+                href="https://eisc.univalle.edu.co/index.php/programas-academicos/ingenieria-de-sistemas"
+                target="_blank"
+                rel="noopener noreferrer"><span>Ingenieria de Sistemas</span></a
+            > en la
+            <a
+                href="https://www.univalle.edu.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Universidad del Valle.</span>
+            </a> Se preguntaran, ¿Que paso con la musica? Pues la respuesta es simple,
+            la musica siempre ha estado ahi, siempre me ha acompañado, siempre ha
+            estado para mi, y siempre estara, pero la musica al menos la forma en
+            que yo consevia estudiarla profesionalmente, no era lo que yo queria,
+            ademas para hacer musica es necesario tener ciertos recursos, recursos
+            que en ese momento no tenia, entonces decidi que la opcion mas viable
+            era estudiar algo que me gustara, que me apasionara y que me diera la
+            oportunidad de adquirir esos recursos para poder hacer musica en un futuro.
+        </p>
+        <p>
+            Asi que eso es lo que estoy haciendo, me gradue como Ingeniero de
+            Sistemas en el 2021 y ahora estoy construyendo eso que siempre
+            quise, estoy haciendo aplicaciones digitales para ayudar a la gente,
+            estoy creando, desde cero, de la nada, que es algo que siempre me
+            encanto de la ingeneria de Sistemas, la capacidad de crear con
+            unicamente una idea y un computador. Y que si lo ponemos en esas
+            palabras, parece magia, incluso, parece musica.
+        </p>
+    </section>
+</About>
+<style>
+    .image_paragraph {
+        display: flex;
+        align-items: center;
+    }
+    .image_box {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .image_box_column {
+        display: flex;
+        flex-direction: row;
+    }
+    .image_box_column img {
+        border-radius: 0%;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-top: 1rem;
+        color: white;
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: var(--primaryBaseColor);
+            word-spacing: 0.1rem;
+            line-height: 1.4;
+        }
+    }
+    h1 {
+        margin-bottom: 2rem;
+    }
+    .section_content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+    button {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        background-color: var(--secondaryHighlightColor);
+        color: var(--primaryTextColor);
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: var(--primaryHighlightColor);
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    p {
+        margin-top: 2rem;
+    }
+    a {
+        color: var(--primaryHighlightColor);
+        font-style: italic;
+    }
+    span {
+        color: var(--primaryHighlightColor);
+    }
+    @media screen and (max-width: 1200px) {
+        .image_paragraph {
+            flex-direction: column;
+        }
+    }
+</style>

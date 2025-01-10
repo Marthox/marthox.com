@@ -1,0 +1,67 @@
+---
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const footerElements = {
+    about: t("footer.about"),
+    contact: t("footer.contact"),
+    privacy: t("footer.privacy"),
+};
+
+const footerLinks = Object.entries(footerElements).map(([href, text]) => ({
+    href: `/${lang}/${href}`,
+    text,
+}));
+---
+
+<footer>
+    <div class="footer-content">
+        <nav>
+            <ul>
+                {
+                    footerLinks.map((link) => (
+                        <li>
+                            <a href={link.href}>{link.text}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
+        <p>
+            &copy; {new Date().getFullYear()} marthox.com. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        color: #fff;
+        margin: 40px 0;
+        padding: 20px 0;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--backgroundColor);
+    }
+    .footer-content {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,76 @@
+---
+import "@styles/reset.css";
+
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+
+interface Props {
+    title: string;
+    lang: string;
+}
+
+const { title, lang } = Astro.props;
+
+const vars = {
+    backgroundColor: "#020C03",
+    primaryHighlightColor: "#80F253",
+    secondaryHighlightColor: "#16db65",
+    primaryBaseColor: "#E2E2E2",
+    secondaryBaseColor: "#C6CCC4",
+};
+---
+
+<html lang={lang}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Navbar />
+        <slot />
+        <Footer />
+    </body>
+</html>
+<style is:global define:vars={vars}>
+    /* Classes */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+    /* Elements */
+    body {
+        background-color: var(--backgroundColor);
+        font-family: "Courier New", Courier, monospace;
+    }
+    h1 {
+        font-size: 2.6rem;
+        color: var(--primaryHighlightColor);
+    }
+    h2 {
+        font-size: 2rem;
+        color: var(--primaryHighlightColor);
+    }
+    h3 {
+        font-size: 1.6rem;
+        color: var(--primaryHighlightColor);
+    }
+    p {
+        font-size: 1.3rem;
+        color: var(--primaryBaseColor);
+        word-spacing: 0.1rem;
+        line-height: 1.6;
+    }
+    @media screen and (max-width: 1200px) {
+        .container {
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+    }
+</style>

@@ -1,0 +1,46 @@
+---
+import About from "@pages/en/about/index.astro";
+---
+
+<About>
+    <section></section>
+</About>
+<style>
+    .image_paragraph {
+        display: flex;
+        align-items: center;
+    }
+    .image_box {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .image_box_column {
+        display: flex;
+        flex-direction: row;
+    }
+    .image_box_column img {
+        border-radius: 0%;
+    }
+    @media screen and (max-width: 1200px) {
+        .image_paragraph {
+            flex-direction: column;
+        }
+    }
+    section {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        margin-top: 2rem;
+    }
+    a {
+        font-style: italic;
+    }
+    span {
+        color: var(--primaryHighlightColor);
+    }
+</style>

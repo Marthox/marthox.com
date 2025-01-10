@@ -1,0 +1,64 @@
+---
+interface Props {
+    nav_elements: { nav_name: string; href: string; is_active: boolean }[];
+}
+const { nav_elements } = Astro.props;
+---
+
+<script is:inline></script>
+<nav>
+    <ul>
+        {
+            nav_elements.map((element) => (
+                <li
+                    class={element.is_active ? "active" : ""}
+                    onclick="location.href = this.querySelector('a').href"
+                >
+                    <a href={element.href}>{element.nav_name}</a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>
+
+<style>
+    .active {
+        background-color: var(--secondaryHighlightColor);
+    }
+    .active a {
+        color: var(--highlightTextColor);
+    }
+    nav {
+        margin: 2rem;
+        height: 3rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        overflow: scroll;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+    nav::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+    ul {
+        display: flex;
+        list-style: none;
+    }
+    li {
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        cursor: pointer;
+    }
+    li:hover {
+        background-color: var(--secondaryHighlightColor);
+    }
+    li:hover a {
+        color: var(--highlightTextColor);
+    }
+    a {
+        color: var(--secondaryHighlightColor);
+        text-decoration: none;
+    }
+</style>

@@ -1,0 +1,98 @@
+---
+import About from "@pages/es/about/index.astro";
+---
+
+<About>
+    <section>
+        <p>"La mejora continua es mejor que la perfeccion retrasada"</p>
+        <p>
+            Ingeniero de Sistemas graduado de la Universidad del Valle, con buen
+            dominio del inglés (C1), conocimientos y experiencia en Python y
+            JavaScript, así como algo de experiencia en Java, C#, Ruby y Elixir.
+            Tengo experiencia en frameworks y bibliotecas como React, NodeJS,
+            Django, Flask, Fast-Api, Phoenix, Svelte y Rails. Control de
+            versiones (Git) y plataformas de alojamiento de control de versiones
+            remotas (GitHub), y sistemas de contenedores (Docker).
+        </p>
+        <p>
+            Estoy siempre buscando nuevos conocimientos y conceptos para crecer
+            tanto personal como profesionalmente, con el objetivo de convertirme
+            cada día en un mejor profesional, pero más importante aún, en una
+            mejor persona y un mejor líder.
+        </p>
+    </section>
+</About>
+<style>
+    .image_paragraph {
+        display: flex;
+        align-items: center;
+    }
+    .image_box {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .image_box_column {
+        display: flex;
+        flex-direction: row;
+    }
+    .image_box_column img {
+        border-radius: 0%;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-top: 1rem;
+        color: white;
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: var(--primaryBaseColor);
+            word-spacing: 0.1rem;
+            line-height: 1.4;
+        }
+    }
+    h1 {
+        margin-bottom: 2rem;
+    }
+    .section_content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+    button {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        background-color: var(--secondaryHighlightColor);
+        color: var(--primaryTextColor);
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: var(--primaryHighlightColor);
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    p {
+        margin-top: 2rem;
+    }
+    a {
+        color: var(--primaryHighlightColor);
+        font-style: italic;
+    }
+    span {
+        color: var(--primaryHighlightColor);
+    }
+    @media screen and (max-width: 1200px) {
+        .image_paragraph {
+            flex-direction: column;
+        }
+    }
+</style>

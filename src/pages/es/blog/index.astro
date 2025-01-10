@@ -1,0 +1,43 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+
+import profilePhoto from "@assets/MateoGregoryProfile.jpg";
+import InnerNavbar from "@components/InnerNavbar.astro";
+
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const base_url = "/es/about";
+
+const categories = {
+    summary: t("inner_nav.summary"),
+    music: t("inner_nav.music"),
+    history: t("inner_nav.history"),
+    curriculum: t("inner_nav.curriculum"),
+};
+
+const current_tab_selected = Astro.url.pathname.split("/").pop();
+
+const nav_elements = Object.entries(categories).map(([key, value]) => ({
+    nav_name: value,
+    href: `${base_url}/${key}`,
+    is_active: key === current_tab_selected,
+}));
+---
+
+<Layout title="Hola, Soy Mateo!" lang="es" />
+<style>
+    .container {
+        align-items: center;
+    }
+    img {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+    }
+</style>

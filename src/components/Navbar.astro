@@ -1,0 +1,68 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+import LanguageButton from "@components/LanguageButton.astro";
+import Logo from "@components/Logo.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const navElements = {
+    "": t("nav.home"),
+    about: t("nav.about"),
+    blog: t("nav.blog"),
+    community: t("nav.community"),
+    projects: t("nav.projects"),
+};
+
+const links = Object.entries(navElements).map(([href, text]) => ({
+    href: getRelativeLocaleUrl(lang, href),
+    text,
+}));
+---
+
+<nav>
+    <Logo />
+    <ul>
+        {
+            links.map((link) => (
+                <li onclick="location.href = this.querySelector('a').href">
+                    <a href={link.href}>{link.text}</a>
+                </li>
+            ))
+        }
+    </ul>
+    <LanguageButton color="white" />
+</nav>
+
+<style>
+    nav {
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    li {
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        cursor: pointer;
+    }
+    li:hover {
+        background-color: var(--primaryHighlightColor);
+    }
+    li:hover a {
+        color: var(--highlightTextColor);
+    }
+
+    a {
+        color: var(--primaryBaseColor);
+        text-decoration: none;
+    }
+</style>

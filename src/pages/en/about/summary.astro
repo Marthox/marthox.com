@@ -1,0 +1,63 @@
+---
+import About from "@pages/en/about/index.astro";
+---
+
+<About
+    ><section>
+        <p>“Continuous improvement is better than delayed perfection.”</p>
+        <p>
+            Systems Engineer from Universidad del Valle, with a strong command
+            of English (C1 level) and knowledge and experience in Python and
+            JavaScript, along with some experience in Java, C#, Ruby, and
+            Elixir. I am familiar with frameworks and libraries such as React,
+            NodeJS, Django, Flask, FastAPI, Phoenix, Svelte, and Rails. I have
+            experience with version control (Git), remote version control
+            hosting platforms (GitHub), and container systems (Docker).
+        </p>
+        <p>
+            I'm constantly seeking new knowledge and concepts to grow both
+            personally and professionally, with the goal of becoming a better
+            professional each day, but more importantly, a better person and a
+            better leader.
+        </p>
+    </section>
+</About>
+<style>
+    .image_paragraph {
+        display: flex;
+        align-items: center;
+    }
+    .image_box {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .image_box_column {
+        display: flex;
+        flex-direction: row;
+    }
+    .image_box_column img {
+        border-radius: 0%;
+    }
+    @media screen and (max-width: 1200px) {
+        .image_paragraph {
+            flex-direction: column;
+        }
+    }
+    section {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        margin-top: 2rem;
+    }
+    a {
+        font-style: italic;
+    }
+    span {
+        color: var(--primaryHighlightColor);
+    }
+</style>

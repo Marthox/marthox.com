@@ -1,0 +1,66 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+
+import profilePhoto from "@assets/MateoGregoryProfile.jpg";
+import InnerNavbar from "@components/InnerNavbar.astro";
+
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import { SOCIAL } from "@constants/social";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const base_url = "/es/about";
+
+const categories = {
+    summary: t("inner_nav.summary"),
+    music: t("inner_nav.music"),
+    history: t("inner_nav.history"),
+    curriculum: t("inner_nav.curriculum"),
+};
+
+const current_tab_selected = Astro.url.pathname.split("/").pop();
+
+const nav_elements = Object.entries(categories).map(([key, value]) => ({
+    nav_name: value,
+    href: `${base_url}/${key}`,
+    is_active: key === current_tab_selected,
+}));
+---
+
+<Layout title="Hola, Soy Mateo!" lang="es">
+    <div class="container">
+        <a href={SOCIAL.LINKEDIN} target="_blank" rel="noopener noreferrer">
+            <Image
+                alt="Mateo Gregory de perfil con un fondo con instrumentos musicales como guitarras y un bajo."
+                src={profilePhoto}
+            />
+        </a>
+        <h1>Asi que... ¿Quieres saber de mi?</h1>
+        <InnerNavbar nav_elements={nav_elements} />
+        <div class="content_container">
+            <slot />
+        </div>
+    </div>
+</Layout>
+<style>
+    .container {
+        align-items: center;
+        justify-content: center;
+    }
+    .content_container {
+        width: 100%;
+        margin-bottom: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+    }
+</style>

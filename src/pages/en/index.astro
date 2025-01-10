@@ -1,0 +1,85 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { getLangFromUrl } from "@i18n/utils";
+
+import { EXTERNAL_LINKS } from "@constants/external_links";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout title="Hola, soy Marthox!" lang="en">
+    <div class="main_container">
+        <div class="container">
+            <section>
+                <h1>Hello...</h1>
+                <p>I'm <span>Mateo Gregory</span></p>
+                <br />
+                <br />
+                <p>
+                    I'm a <span>software engineer</span>
+                    <br />
+                    I'm a <span>musician, guitarist</span> and <span
+                        >composer</span
+                    >
+                    (in process)
+                    <br />
+                    I'm one of the <span>founders</span> of the
+                    <a href={EXTERNAL_LINKS.PARCHA_TECH}>parcha.tech </a> community
+                    <br />
+                    I'm passionate about <span>learning</span> and
+                    <span>sharing knowledge</span>
+                </p>
+                <div class="button_layout">
+                    <a href={`/${lang}/about`}> > About Me</a>
+                    <a href={`/${lang}/projects`}> > Projects</a>
+                </div>
+            </section>
+            <section>
+                <h2>Want to work with me?</h2>
+                <br />
+                <br />
+                <p>
+                    I'm always open to discussing new projects, creative ideas,
+                    or opportunities to be part of your visions. Feel free to
+                    reach out to me!
+                </p>
+                <div class="button_layout">
+                    <a href={`/${lang}/contact`}> > Contact Me</a>
+                </div>
+            </section>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .main_container {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        gap: 4rem;
+        max-width: 700px;
+    }
+
+    .button_layout {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    a {
+        color: var(--primaryHighlightColor);
+        font-style: italic;
+        text-decoration: none;
+    }
+    a:hover {
+        color: var(--secondaryHighlightColor);
+    }
+    span {
+        color: var(--primaryHighlightColor);
+    }
+</style>
