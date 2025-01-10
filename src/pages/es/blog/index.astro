@@ -28,7 +28,14 @@ const nav_elements = Object.entries(categories).map(([key, value]) => ({
 }));
 ---
 
-<Layout title="Hola, Soy Mateo!" lang="es" />
+<Layout title="Hola, Soy Mateo!" lang="es">
+    <div class="wip-banner">
+        <p>
+            Este blog está en construcción. ¡Vuelve pronto para más
+            actualizaciones!
+        </p>
+    </div>
+</Layout>
 <style>
     .container {
         align-items: center;
@@ -39,5 +46,11 @@ const nav_elements = Object.entries(categories).map(([key, value]) => ({
         width: 20rem;
         height: 20rem;
         border-radius: 50%;
+    }
+    .wip-banner {
+        background-color: yellow;
+        padding: 1rem;
+        text-align: center;
+        font-weight: bold;
     }
 </style>

@@ -41,6 +41,11 @@ const links = Object.entries(navElements).map(([href, text]) => ({
         height: 3rem;
         display: flex;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
+        background-color: black;
+        z-index: 1000;
+        align-items: center;
     }
 
     ul {
@@ -53,6 +58,7 @@ const links = Object.entries(navElements).map(([href, text]) => ({
         padding-left: 2rem;
         padding-right: 2rem;
         cursor: pointer;
+        height: 100%;
     }
     li:hover {
         background-color: var(--primaryHighlightColor);
