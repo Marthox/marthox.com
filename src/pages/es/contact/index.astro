@@ -16,10 +16,7 @@ const lang = getLangFromUrl(Astro.url);
                         href="magremenez@gmail">magremenez@gmail.com</a
                     > con el asunto "Quiero trabajar contigo".
                 </p>
-                <form
-                    action="https://formspree.io/f/{your_form_id}"
-                    method="POST"
-                >
+                <form name="contact" data-netlify="true">
                     <label for="name">Nombre:</label>
                     <input
                         type="text"

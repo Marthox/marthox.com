@@ -1,9 +1,5 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
-
-import profilePhoto from "@assets/MateoGregoryProfile.jpg";
-import InnerNavbar from "@components/InnerNavbar.astro";
 
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
 
@@ -31,23 +27,16 @@ const nav_elements = Object.entries(categories).map(([key, value]) => ({
 <Layout title="Hola, Soy Mateo!" lang="en">
     <div class="wip-banner">
         <p>
-            This blog is under construction. Check back soon for more updates!
+            This page is under construction. Check back soon for more updates!
         </p>
     </div>
 </Layout>
 <style>
-    .container {
-        align-items: center;
-    }
-    img {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        width: 20rem;
-        height: 20rem;
-        border-radius: 50%;
-    }
     .wip-banner {
-        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
         padding: 1rem;
         text-align: center;
         font-weight: bold;
